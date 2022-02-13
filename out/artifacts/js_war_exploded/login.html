@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form表单登录</title>
+</head>
+<body>
+
+	<form method="POST" id="formLogin" onsubmit="go();return false">
+		<p>端口地址：<input id="address" size="20" value="bi-bigdata.pudutech.online">
+		<p>用户：<input type="text" name="user" size="20" value="zengqingyong@pudutech.com"></p>
+		<p>密码：<input type="password" name="password" size="20" value="Pd123456"></p>
+		<!--<p>登录成功后的跳转地址：<input typ e="text" name="surl" size="200" value="http://localhost:8080/ThirdPartySystemInterface.html"></p>-->
+		<!--<p>登录失败后的跳转地址：<input type="text" name="furl" size="200" value="manager"></p>-->
+		<!--<p><input type="submit" value="确定" name="B1"></p>-->
+
+	</form>
+	
+	<script language="javascript">
+		function go()
+		{
+//			formLogin.action = "https://" + address.value + "/smartbi/vision/login.jsp";
+			formLogin.action = "http://localhost:8080/ThirdPartySystemInterface.html";
+			formLogin.submit();
+			return true; 
+		}
+        /*用window.onload调用myfun()*/
+        window.onload=go;//不要括号
+	</script>
+</body>
+</html>
